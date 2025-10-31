@@ -2,11 +2,7 @@ import Handlebars from "handlebars";
 import * as fs from "fs";
 import * as path from "path";
 import type { Project } from "../types/project";
-
-interface GeneratedFile {
-  path: string;
-  content: string | Buffer;
-}
+import type { GeneratedFile } from "../types/generated";
 
 export class CodeGenerator {
   private templates: Map<string, HandlebarsTemplateDelegate> = new Map();
