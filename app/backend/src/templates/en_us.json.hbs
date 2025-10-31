@@ -1,0 +1,17 @@
+{
+{{#each items}}
+  "item.{{../modId}}.{{this.id}}": "{{this.name}}",
+{{/each}}
+{{#each armor}}
+  "item.{{../modId}}.{{this.id}}": "{{this.name}}",
+{{/each}}
+{{#each blocks}}
+  "block.{{../modId}}.{{this.id}}": "{{this.name}}",
+{{/each}}
+{{#each entities}}
+  "entity.{{../modId}}.{{this.id}}": "{{this.name}}",
+{{/each}}
+{{#each enchantments}}
+  "enchantment.{{../modId}}.{{this.id}}": "{{this.name}}"
+{{/each}}
+}

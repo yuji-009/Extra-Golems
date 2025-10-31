@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "{{modId}}",
+  "version": "{{version}}",
+  "name": "{{modName}}",
+  "description": "{{description}}",
+  "authors": [
+    "{{author}}"
+  ],
+  "contact": {
+    "homepage": "https://github.com",
+    "sources": "https://github.com"
+  },
+  "license": "MIT",
+  "icon": "assets/{{modId}}/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.{{author}}.{{modId}}.{{modNameCamel}}Mod"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "{{mcVersion}}",
+    "java": ">=17"
+  }
+}

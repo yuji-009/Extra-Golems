@@ -1,0 +1,36 @@
+package com.{{author}}.{{modId}}.item;
+
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
+{{#if durability}}
+import net.minecraft.world.item.DiggerItem;
+import net.minecraft.tags.BlockTags;
+{{/if}}
+{{#if attackDamage}}
+import net.minecraft.world.entity.ai.attributes.Attributes;
+{{/if}}
+
+public class {{className}} extends Item {
+
+    public {{className}}() {
+        super(new Item.Properties()
+{{#if durability}}
+            .durability({{durability}})
+{{/if}}
+{{#if rarity}}
+            .rarity(Rarity.{{rarityUpper}})
+{{/if}}
+        );
+    }
+
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true;
+    }
+
+    @Override
+    public int getEnchantmentValue() {
+        return 15;
+    }
+}
