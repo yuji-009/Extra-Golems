@@ -238,8 +238,3 @@ exit /b %ERRORLEVEL%`;
     }
   }
 }
-
-export interface GeneratedFile {
-  path: string;
-  content: string | Buffer;
-}
