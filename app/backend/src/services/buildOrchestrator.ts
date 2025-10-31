@@ -1,7 +1,10 @@
 import * as fs from "fs";
 import * as path from "path";
-import { exec } from "child-process-promise";
+import { exec } from "child_process";
+import { promisify } from "util";
 import type { GeneratedFile } from "../types/generated";
+
+const execAsync = promisify(exec);
 
 const BUILD_TIMEOUT = 120000; // 120 seconds
 const MAX_CONCURRENT_BUILDS = 5;
