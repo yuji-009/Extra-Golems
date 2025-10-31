@@ -103,10 +103,7 @@ export class BuildOrchestrator {
     const command = `cd "${tempDir}" && chmod +x gradlew && ./gradlew build --no-daemon`;
 
     try {
-      const result = await exec(command, {
-        timeout: BUILD_TIMEOUT,
-        shell: "/bin/bash",
-      });
+      const result = await execAsync(command);
 
       // Find the generated JAR
       const jarPath = this.findJar(tempDir);
