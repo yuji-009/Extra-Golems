@@ -27,7 +27,7 @@ if (!fs.existsSync(uploadDir)) {
 }
 
 // Error handling middleware
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
   console.error("Error:", err);
 
   if (err instanceof multer.MulterError) {
@@ -38,7 +38,7 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     }
   }
 
-  res.status(500).json({
+  return res.status(500).json({
     success: false,
     error: err.message || "Internal server error",
   });
