@@ -50,7 +50,7 @@ app.use("/api/textures", textureRoutes);
 app.use("/api/models", modelRoutes);
 
 // Health check
-app.get("/api/health", (req: Request, res: Response) => {
+app.get("/api/health", (_req: Request, res: Response) => {
   res.json({ status: "ok" });
 });
 
